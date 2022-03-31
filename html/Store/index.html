@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/store.css">
+    <title>디저트39</title>
+</head>
+
+<body>
+    <div class="top">
+        <div>
+            <h2>
+                디저트39
+                <b>전국 매장 찾기</b>
+                <span class="tit-eng">Store</span>
+            </h2>
+        </div>
+        <!-- 카카오 맵 api -->
+        <div id="map"></div>
+        <button type="button">내 위치 기반으로 지도 보기</button>
+        <div class="info-wrap">
+            <div class="info-search-box">
+                <p>· 찾으시는 매장을 지도에서 클릭하시면 자세히 볼 수 있습니다.</p>
+                <h3>이용 가능 서비스</h3>
+                <ul>
+                    <li>포장</li>
+                    <li>배달</li>
+                    <li>주차</li>
+                    <li>Wifi</li>
+                    <li>화장실</li>
+                </ul>
+                <h3>지역별 매장 안내</h3>
+                <input type="text" name="search_txt" placeholder="매장명 또는 주소를 입력하세요">
+            </div>
+            <div class="info-store-box">
+
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 카카오 맵 api -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f7ce88603e0054baaf1a5d1193a98451"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(37.499269, 127.043305),
+        level: 5
+    };
+
+    var map = new kakao.maps.Map(container, options);
+    // 마커가 표시될 위치
+    var markerPosition = new kakao.maps.LatLng(37.495509, 127.027212);
+
+    // 마커 생성
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정
+    marker.setMap(map);
+
+</script>
+
+</html>
