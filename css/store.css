@@ -52,6 +52,9 @@ b{
 .fw500{
     font-weight: 500;
 }
+.fw600{
+    font-weight: 600;
+}
 .fw700{
     font-weight: 700;
 }
@@ -121,4 +124,57 @@ ul{
 .topbox {
     display: flex;
     align-items: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.pdb100 {
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+.pdt120 {
+    padding-top: 120px;
+    box-sizing: border-box;
+}
+.center {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.location-map-wrap{
+    width: 100%;
+    height: 470px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.section-title {
+    font-size: 45px;
+    margin-right: 120px;
+}
+.contact-list{
+    display: flex;
+}
+.location-wrap .cont-wrap h3 {
+    font-size: 30px;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+}
+p {
+    font-size: 18px;
+    letter-spacing: -0.025em;
+    line-height: 1.3;
+}
+.cont-wrap:first-of-type {
+    margin-left: 0;
+}
+.cont-wrap{
+    margin-left: 50px;
 }
