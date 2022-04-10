@@ -92,6 +92,9 @@ b {
     height: 28px;
     margin-right: 7px;
 }
+.map-wrap .btn-location:hover {
+    background-color: #444;
+}
 .pdt100 {
     padding-top: 100px;
     box-sizing: border-box;
@@ -231,6 +234,27 @@ ul {
     width: fit-content;
     cursor: pointer;
 }
+.btn-cate:hover .textbox {
+    background-color: #1c1c1c;
+}
+.btn-cate:hover .textbox .ico.takeout {
+    background-image: url(/img/takeout-w.svg);
+}
+.btn-cate:hover .textbox .ico.delivery {
+    background-image: url(/img/delivery-w.svg);
+}
+.btn-cate:hover .textbox .ico.parking {
+    background-image: url(/img/parking-w.svg);
+}
+.btn-cate:hover .textbox .ico.wifi {
+    background-image: url(/img/wifi-w.svg);
+}
+.btn-cate:hover .textbox .text {
+    color: #fff;
+}
+.btn-cate:hover .textbox .ico {
+    color: #fff;
+}
 .ico.takeout {
     background-image: url(/img/takeout.svg);
 }
@@ -324,8 +348,23 @@ button {
 .fa-restroom:before {
     content: "\f7bd";
 }
+.deco-backline::before {
+    content: "";
+    z-index: -1;
+    position: relative;
+    left: 0;
+    top: 50px;
+    bottom: 5px;
+    display: block;
+    width: 100%;
+    height: 13.188px;
+    background-color: #c0c0c0;
+    -webkit-transform: scaleX(1.03);
+    transform: scaleX(1.03);
+    opacity: 0.3;
+}
 
-/* 오시는 길 */
+/* --------------오시는 길-------------- */
 .topbox {
     display: flex;
     align-items: center;
@@ -420,4 +459,11 @@ a {
     background: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/detail/img_zoom.png)
         no-repeat;
     text-indent: -9999px;
+}
+.roughmap_lebel_text {
+    padding: 6px 8px 5px;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 3px;
+    font-weight: 600;
 }
