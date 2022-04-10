@@ -1,104 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&family=Noto+Sans+KR:wght@100;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../css/store.css">
-    <title>디저트39</title>
-</head>
-
-<body>
-    <div class="top">
-        <div class="center">
-            <h2>
-                디저트39
-                <b>전국 매장 찾기</b>
-                <span class="tit eng fw500">Store</span>
-            </h2>
-        </div>
-    </div>
-    <section class="pdt100 stroe-section">
-        <div class="section-wrap">
-            <div class="map-wrap">
-                <!-- 카카오 맵 api -->
-                <div id="map"></div>
-                <button type="button" class="fw700 btn-location">
-                    <span>내 위치 기반으로 지도 보기</span>
-                </button>
-            </div>
-            <div class="info-wrap">
-                <div class="info-search-box">
-                    <p>· 찾으시는 매장을 지도에서 클릭하시면 자세히 볼 수 있습니다.</p>
-                    <h3 class="info-tit">이용 가능 서비스</h3>
-                    <ul>
-                        <li>
-                            <button>
-                                <span class="ico takeout"></span>
-                                <span>포장</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <span class="ico delivery"></span>
-                                <span>배달</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <span class="ico parking"></span>
-                                <span>주차</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <span class="ico wifi"></span>
-                                <span>Wifi</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <span class="ico restroom"></span>
-                                <span>화장실</span>
-                            </button>
-                        </li>
-                    </ul>
-                    <h3 class="info-tit">지역별 매장 안내</h3>
-                    <input type="text" name="search_txt" placeholder="매장명 또는 주소를 입력하세요">
-                </div>
-                <div class="info-store-box">
-            
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@600&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&family=Noto+Sans+KR:wght@100;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <link rel="stylesheet" href="../css/store.css" />
+        <title>디저트39</title>
+    </head>
+    <script
+        src="https://kit.fontawesome.com/b44f782384.js"
+        crossorigin="anonymous"
+    ></script>
+    <body>
+        <!-- 탑 부분 시작 -->
+        <div class="top">
+            <div class="center">
+                <h2>
+                    디저트39
+                    <b>전국 매장 찾기</b>
+                    <span class="tit eng fw500">Store</span>
+                </h2>
             </div>
         </div>
-    </section>
-</body>
-<!-- 카카오 맵 api -->
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f7ce88603e0054baaf1a5d1193a98451"></script>
-<script>
-    var container = document.getElementById('map');
-    var options = {
-        center: new kakao.maps.LatLng(37.499269, 127.043305),
-        level: 5
-    };
+        <!-- -------------탑 부분 끝------------- -->
 
-    var map = new kakao.maps.Map(container, options);
-    // 마커가 표시될 위치
-    var markerPosition = new kakao.maps.LatLng(37.495509, 127.027212);
+        <!-- -------------스토어 부분 시작------------- -->
+        <section class="pdt100 stroe-section">
+            <div class="section-wrap">
+                <div class="map-wrap">
+                    <!-- -------------카카오 맵 api 시작--------------->
+                    <div id="map"></div>
+                    <!-- -------------카카오 맵 api 끝--------------->
+                    <button type="button" class="fw700 btn-location">
+                        <span class="icon">
+                            <img src="/img/gps_icon_w.png" alt="gps 아이콘" />
+                        </span>
+                        내 위치 기반으로 지도 보기
+                    </button>
+                </div>
+                <!-- -------------정보창 시작------------- -->
+                <div class="info-wrap">
+                    <div class="info-search-box">
+                        <p class="tac info-desc">
+                            · 찾으시는 매장을 지도에서 클릭하시면 자세히 볼 수
+                            있습니다.
+                        </p>
+                        <h3 class="fw700 tac info-tit">이용 가능 서비스</h3>
+                        <ul class="fw500 cate-list">
+                            <li>
+                                <button class="btn-cate">
+                                    <span class="textbox">
+                                        <span class="ico takeout"></span>
+                                        <span>포장</span>
+                                    </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn-cate">
+                                    <span class="textbox">
+                                        <span class="ico delivery"></span>
+                                        <span>배달</span>
+                                    </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn-cate">
+                                    <span class="textbox">
+                                        <span class="ico parking"></span>
+                                        <span>주차</span>
+                                    </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn-cate">
+                                    <span class="textbox">
+                                        <span class="ico wifi"></span>
+                                        <span>Wifi</span>
+                                    </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn-cate">
+                                    <span class="textbox">
+                                        <span class="ico">
+                                            <i class="fas fa-restroom"></i>
+                                        </span>
+                                        <span>화장실</span>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                        <h3 class="fw700 tac info-tit">지역별 매장 안내</h3>
+                        <div class="search-form">
+                            <input
+                                type="text"
+                                class="fw300 search-input"
+                                name="search_txt"
+                                placeholder="매장명 또는 주소를 입력하세요."
+                            />
+                            <button class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- -------------매장 부분 시작------------- -->
+                    <div class="info-store-box">
+                        <ul class="store-list">
+                            <li>
+                                <button>
+                                    <div class="inner">
+                                        <div class="bgbox">
+                                            <div
+                                                style="
+                                                    background-image: url(/img/thumb-977819194_B1IvMmob_commingsoon_img_530x300.jpg);
+                                                "
+                                                class="bg"
+                                            ></div>
+                                        </div>
+                                        <div class="textbox">
+                                            <h4 class="fw700 tit">
+                                                이수역점(오픈예정)
+                                            </h4>
+                                            <div class="fw500 text">
+                                                <h5 class="left">주소</h5>
+                                                <p class="fw300 right">
+                                                    서울 서초구 서초대로 12
+                                                    (방배동, 세양아르비채)
+                                                </p>
+                                            </div>
+                                            <div class="fw500 text">
+                                                <h5 class="left">영업시간</h5>
+                                                <p class="fw300 right"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <div class="inner">
+                                        <div class="bgbox">
+                                            <div
+                                                style="
+                                                    background-image: url(/img/thumb-977819194_B1IvMmob_commingsoon_img_530x300.jpg);
+                                                "
+                                                class="bg"
+                                            ></div>
+                                        </div>
+                                        <div class="textbox">
+                                            <h4 class="fw700 tit">
+                                                세종 새롬점(오픈예정)
+                                            </h4>
+                                            <div class="fw500 text">
+                                                <h5 class="left">주소</h5>
+                                                <p class="fw300 right">
+                                                    세종특별자치시 새롬중앙로 59
+                                                    (새롬동, 새롬빌딩)
+                                                </p>
+                                            </div>
+                                            <div class="fw500 text">
+                                                <h5 class="left">영업시간</h5>
+                                                <p class="fw300 right"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <div class="inner">
+                                        <div class="bgbox">
+                                            <div
+                                                style="
+                                                    background-image: url(/img/thumb-977819194_B1IvMmob_commingsoon_img_530x300.jpg);
+                                                "
+                                                class="bg"
+                                            ></div>
+                                        </div>
+                                        <div class="textbox">
+                                            <h4 class="fw700 tit">
+                                                의정부고산점(오픈예정)
+                                            </h4>
+                                            <div class="fw500 text">
+                                                <h5 class="left">주소</h5>
+                                                <p class="fw300 right">
+                                                    경기 의정부시 바대논길 104
+                                                    (고산동)
+                                                </p>
+                                            </div>
+                                            <div class="fw500 text">
+                                                <h5 class="left">영업시간</h5>
+                                                <p class="fw300 right"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- -------------매장 부분 끝------------- -->
+                </div>
+            </div>
+        </section>
+    </body>
+    <!--------------- 카카오 맵 api 자바스크립트 부분 --------------->
+    <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f7ce88603e0054baaf1a5d1193a98451"
+    ></script>
+    <script>
+        var container = document.getElementById("map");
+        var options = {
+            center: new kakao.maps.LatLng(37.499269, 127.043305),
+            level: 5,
+        };
 
-    // 마커 생성
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
+        var map = new kakao.maps.Map(container, options);
+        // 마커가 표시될 위치
+        var markerPosition = new kakao.maps.LatLng(37.495509, 127.027212);
 
-    // 마커가 지도 위에 표시되도록 설정
-    marker.setMap(map);
+        // 마커 생성
+        var marker = new kakao.maps.Marker({
+            position: markerPosition,
+        });
 
-</script>
-
+        // 마커가 지도 위에 표시되도록 설정
+        marker.setMap(map);
+        // ------------- 카카오 웹 api 자바스크립트 부분 끝 -------------
+    </script>
 </html>

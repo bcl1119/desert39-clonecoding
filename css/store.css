@@ -1,15 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     word-break: keep-all;
     vertical-align: baseline;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     line-height: 100%;
     outline: none;
     letter-spacing: -0.5px;
 }
-div{
+div {
     display: block;
 }
 span {
@@ -19,71 +19,90 @@ span {
     color: inherit;
     letter-spacing: inherit;
 }
-#map{
+#map {
     position: relative;
     width: 100%;
-    height: 800px;;
+    height: 800px;
 }
-.top{
+.top {
     height: 185px;
     background-image: url(/img/sub_banner_bg.png);
     background-size: cover;
 }
-h2{
+h2 {
     font-size: 26px;
     font-weight: 400;
 }
-.top h2{
+.top h2 {
     padding-top: 110px;
 }
-.center{
+.center {
     width: 95%;
     max-width: 1440px;
     margin: 0 auto;
 }
-b{
+b {
     font-weight: 700;
 }
-.tit {
+.top .center .tit {
     display: block;
     margin-top: 15px;
     font-size: 60px;
 }
-.fw500{
+.fw300 {
+    font-weight: 300;
+}
+.fw500 {
     font-weight: 500;
 }
-.fw600{
+.fw600 {
     font-weight: 600;
 }
-.fw700{
+.fw700 {
     font-weight: 700;
 }
 .eng {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: "Lexend Deca", sans-serif;
 }
-.btn-location{
+.map-wrap .btn-location {
     z-index: 1;
     margin-right: 7px;
-    top: 25px;
+    top: 310px;
+    display: flex;
     right: calc((50% + 720px) - 270px);
     position: absolute;
-    color: #FFF;
+    color: #fff;
     background-color: #1c1c1c;
     border-radius: 30px;
     width: 270px;
     height: 60px;
     font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+.btn-location .icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 7px;
+}
+.map-wrap .btn-location .icon img {
+    display: block;
+    max-width: 100%;
+    width: 28px;
+    height: 28px;
+    margin-right: 7px;
 }
 .pdt100 {
     padding-top: 100px;
     box-sizing: border-box;
 }
-.store-section{
+.store-section {
     width: 100%;
 }
-.section-wrap{
+.store-section .section-wrap {
     width: 100%;
     height: 900px;
+    position: relative;
 }
 .store-section .map-wrap {
     position: relative;
@@ -91,18 +110,18 @@ b{
     height: 100%;
 }
 .info-wrap {
-    padding-top: 285px;
-    overflow: hidden;
+    /*.store-section*/
     z-index: 1;
     position: absolute;
     top: 0;
     left: calc((50% + 720px) - 500px);
     width: 500px;
     height: 100%;
-    background-color: #FFF;
+    background-color: #fff;
+    top: 285px;
 }
-ul{
-    list-style:none;
+ul {
+    list-style: none;
 }
 .info-search-box {
     overflow: hidden;
@@ -115,10 +134,189 @@ ul{
     font-size: 28px;
     margin-bottom: 25px;
 }
-
-
-
-
+.info-desc {
+    font-size: 16px;
+    line-height: 130%;
+}
+.tac {
+    text-align: center;
+}
+.store-list li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px 0;
+}
+.bgbox {
+    width: 200px;
+    height: 120px;
+}
+.store-section .info-wrap .store-list li .inner .textbox .tit {
+    margin-bottom: 20px;
+    font-size: 22px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 15px;
+    text-align: left;
+}
+.store-list li:not(:nth-last-of-type(1)) {
+    border-bottom: 1px solid #d2d2d2;
+}
+.store-list li {
+    box-sizing: border-box;
+    padding: 30px 0;
+}
+.store-list li .inner {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 440px;
+}
+.store-list li .inner .textbox .tit {
+    margin-bottom: 20px;
+    font-size: 22px;
+    align-self: flex-start;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding-right: 15px;
+    text-align: left;
+}
+.store-list li .inner .textbox .text {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #2d2d2d;
+}
+.store-list li .inner .textbox .text .right {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.store-list li .inner .textbox .text .left {
+    padding-right: 7px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* h1,h2,h3,h4,h5,h6 {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+} */
+.cate-list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-cate {
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+}
+.ico.takeout {
+    background-image: url(/img/takeout.svg);
+}
+.ico.delivery {
+    background-image: url(/img/delivery.svg);
+}
+.ico.parking {
+    background-image: url(/img/parking.svg);
+}
+.ico.wifi {
+    background-image: url(/img/wifi.svg);
+}
+.bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.ico {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.btn-cate .textbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid #1c1c1c;
+    font-size: 16px;
+}
+button {
+    background-color: #fff;
+}
+.info-wrap .info-search-box .search-form {
+    position: relative;
+    margin-bottom: 25px;
+}
+.search-input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    border: 2px solid #1c1c1c;
+    border-radius: 30px;
+    padding: 0 25px;
+    padding-right: 72px;
+    font-size: 18px;
+}
+.info-search-box .search-form .search-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+}
+/* .search-btn .fas {
+    font-weight: 400;
+} */
+.info-store-box {
+    height: calc(100% - 402px);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+.inner .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 200px - 20px);
+    margin-left: 20px;
+}
+.fa-restroom:before {
+    content: "\f7bd";
+}
 
 /* 오시는 길 */
 .topbox {
@@ -126,7 +324,7 @@ ul{
     align-items: center;
 }
 
-.icon {
+.cont-wrap .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +347,7 @@ ul{
     max-width: 1440px;
     margin: 0 auto;
 }
-.location-map-wrap{
+.location-map-wrap {
     width: 100%;
     height: 470px;
     margin-top: 50px;
@@ -159,7 +357,7 @@ ul{
     font-size: 45px;
     margin-right: 120px;
 }
-.contact-list{
+.contact-list {
     display: flex;
 }
 .location-wrap .cont-wrap h3 {
@@ -172,9 +370,47 @@ p {
     letter-spacing: -0.025em;
     line-height: 1.3;
 }
-.cont-wrap:first-of-type {
+.contact-list .cont-wrap:first-of-type {
     margin-left: 0;
 }
-.cont-wrap{
+.contact-list .cont-wrap {
+    display: flex;
+    align-items: center;
     margin-left: 50px;
+}
+.location-wrap .cont-wrap .icon img {
+    width: 60%;
+}
+.cont-wrap02 {
+    display: flex;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+.wrap_btn_zoom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    z-index: 20;
+    height: 104px;
+    margin: auto;
+    width: auto;
+}
+.wrap_btn_zoom button {
+    display: block;
+    padding: 2px;
+    outline: none;
+}
+.wrap_btn_zoom .img_zoom {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/detail/img_zoom.png)
+        no-repeat;
+    text-indent: -9999px;
 }
