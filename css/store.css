@@ -22,7 +22,7 @@ span {
 #map {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 900px;
 }
 .top {
     height: 185px;
@@ -106,6 +106,9 @@ b {
     width: 100%;
     height: 900px;
     position: relative;
+}
+.section-wrap .map-wrap {
+    height: 900px;
 }
 .store-section .map-wrap {
     position: relative;
@@ -217,12 +220,17 @@ ul {
     font-size: 18px;
     font-weight: 500;
 }
-/* h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     color: inherit;
-} */
+}
 .cate-list {
     display: flex;
     width: 100%;
@@ -466,4 +474,145 @@ a {
     line-height: 15px;
     border-radius: 3px;
     font-weight: 600;
+}
+
+/* -------------팝업 부분 시작 ------------- */
+.popup-store {
+    /* visibility: hidden; */
+    display: none;
+    z-index: 110;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 600px;
+    height: 770px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 35px;
+}
+.popup-store .inner {
+    height: 100%;
+}
+.popup-store .inner .popup-top {
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+.popup-top .popup-tit {
+    font-size: 28px;
+}
+.popup-top .btn-popup-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    transition: color 0.3s;
+}
+.popup-store .inner .popup-content {
+    height: calc(100% - 78px);
+    overflow-y: auto;
+}
+.popup-content .popup-slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.popup-content .popup-slider .slider-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.popup-content .textbox {
+    margin: 35px 0;
+    width: 530px;
+}
+.popup-content .textbox .cate-tit {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.popup-content .textbox .cate-list li {
+    margin: 5px;
+}
+.popup-content .textbox .cate-list {
+    width: 300px;
+}
+.cate-list li .cate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #1c1c1c;
+    font-size: 16px;
+    padding: 0 10px;
+}
+.popup-content .textbox .etc-list {
+    margin-top: 35px;
+}
+.popup-content .textbox .popup-desc {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #5a5a5a;
+}
+.popup-content .textbox .etc-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 22px;
+}
+.popup-content .textbox .etc-list li .left {
+    box-sizing: border-box;
+    padding-right: 10px;
+    line-height: 130%;
+}
+.popup-content .textbox .etc-list li .right {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 10px;
+    line-height: 130%;
+}
+.popup-content .textbox .etc-list li .right::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    display: block;
+    width: 1px;
+    height: 80%;
+    background-color: #bfbfbf;
+}
+.popup-content .textbox .etc-list li p {
+    font-size: 22px;
+}
+.popup-content .textbox .etc-list li:not(:nth-of-type(1)) {
+    margin-top: 7px;
+}
+.ctm {
+    font-weight: inherit;
+    font-family: inherit;
+    color: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    font-size: inherit;
+}
+.popup-store .inner .popup-content .textbox .cate-list li:nth-of-type(1) {
+    margin-left: 0;
+}
+.popup-bg {
+    display: none;
+    z-index: 105;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }

@@ -16,6 +16,12 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+        />
         <link rel="stylesheet" href="/css/store.css" />
         <title>디저트39</title>
     </head>
@@ -124,85 +130,86 @@
                     <div class="info-store-box">
                         <ul class="store-list">
                             <li>
-                                <button>
+                                <button type="button" class="btn-popup-store">
                                     <div class="inner">
                                         <div class="bgbox">
                                             <div
                                                 style="
-                                                    background-image: url(/img/thumb-977819194_B1IvMmob_commingsoon_img_530x300.jpg);
+                                                    background-image: url(http://www.dessert39.com/data/store/thumb-977819194_ony8t9aU_EAB095EB82A8EC97ADECA090_530x300.jpg);
                                                 "
                                                 class="bg"
                                             ></div>
                                         </div>
                                         <div class="textbox">
-                                            <h4 class="fw700 tit">
-                                                이수역점(오픈예정)
-                                            </h4>
+                                            <h4 class="fw700 tit">강남역점</h4>
                                             <div class="fw500 text">
                                                 <h5 class="left">주소</h5>
                                                 <p class="fw300 right">
-                                                    서울 서초구 서초대로 12
-                                                    (방배동, 세양아르비채)
+                                                    서울 서초구 서초대로74길 23
+                                                    (서초동, 서초타운트라팰리스)
+                                                    108호
                                                 </p>
                                             </div>
                                             <div class="fw500 text">
                                                 <h5 class="left">영업시간</h5>
-                                                <p class="fw300 right"></p>
+                                                <p class="fw300 right">
+                                                    평일 07:30~22:00 / 주말
+                                                    10:00~21:00
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </button>
                             </li>
                             <li>
-                                <button>
+                                <button type="button" class="btn-popup-store1">
                                     <div class="inner">
                                         <div class="bgbox">
                                             <div
                                                 style="
-                                                    background-image: url(/img/thumb-977819194_B1IvMmob_commingsoon_img_530x300.jpg);
+                                                    background-image: url(http://www.dessert39.com/data/store/thumb-1029907123_ItihgRrz_ED9599EB8F99EC97ADECA090_530x300.jpg);
                                                 "
                                                 class="bg"
                                             ></div>
                                         </div>
                                         <div class="textbox">
-                                            <h4 class="fw700 tit">
-                                                세종 새롬점(오픈예정)
-                                            </h4>
+                                            <h4 class="fw700 tit">학동역점</h4>
                                             <div class="fw500 text">
                                                 <h5 class="left">주소</h5>
                                                 <p class="fw300 right">
-                                                    세종특별자치시 새롬중앙로 59
-                                                    (새롬동, 새롬빌딩)
+                                                    서울 강남구 학동로 208
+                                                    (논형동, 용문빌딩)
                                                 </p>
                                             </div>
                                             <div class="fw500 text">
                                                 <h5 class="left">영업시간</h5>
-                                                <p class="fw300 right"></p>
+                                                <p class="fw300 right">
+                                                    평일 8:00~21:00 / 주말
+                                                    10:00~22:00
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </button>
                             </li>
                             <li>
-                                <button>
+                                <button type="button" class="btn-popup-store2">
                                     <div class="inner">
                                         <div class="bgbox">
                                             <div
                                                 style="
-                                                    background-image: url(/img/thumb-977819194_B1IvMmob_commingsoon_img_530x300.jpg);
+                                                    background-image: url(http://www.dessert39.com/data/store/thumb-1029907123_DLU6hRwa_EB8C80ECB998ECA090_530x300.jpg);
                                                 "
                                                 class="bg"
                                             ></div>
                                         </div>
                                         <div class="textbox">
-                                            <h4 class="fw700 tit">
-                                                의정부고산점(오픈예정)
-                                            </h4>
+                                            <h4 class="fw700 tit">대치점</h4>
                                             <div class="fw500 text">
                                                 <h5 class="left">주소</h5>
                                                 <p class="fw300 right">
-                                                    경기 의정부시 바대논길 104
-                                                    (고산동)
+                                                    서울 강남구 선릉로64길 28
+                                                    (대치동)
                                                 </p>
                                             </div>
                                             <div class="fw500 text">
@@ -215,10 +222,95 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- -------------매장 부분 끝------------- -->
                 </div>
             </div>
         </section>
+        <!-- -------------매장 부분 끝------------- -->
+        <!-- -------------팝업 스토어 시작------------- -->
+        <div class="popup-store">
+            <div>
+                <div class="inner store_view">
+                    <div class="popup-top">
+                        <h3 class="tac fw700 popup-tit">강남역점</h3>
+                        <button type="button" class="btn-popup-close">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                    </div>
+                    <div class="popup-content">
+                        <div class="popup-slider">
+                            <div class="slider-box">
+                                <div
+                                    style="
+                                        background-image: url(http://www.dessert39.com/data/store/thumb-977819194_ony8t9aU_EAB095EB82A8EC97ADECA090_530x300.jpg);
+                                    "
+                                    class="bg"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="textbox">
+                            <h4 class="fw700 cate-tit">이용 가능 서비스</h4>
+                            <ul class="fw500 cate-list">
+                                <li>
+                                    <div class="cate">
+                                        <span class="ico takeout"></span>
+                                        <span class="text">포장</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cate">
+                                        <span class="ico delivery"></span>
+                                        <span class="text">배달</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cate">
+                                        <span class="ico wifi"></span>
+                                        <span class="text">Wifi</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cate">
+                                        <span class="ico">
+                                            <i class="fas fa-restroom"></i>
+                                        </span>
+                                        <span class="text">화장실</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="fw500 etc-list">
+                                <li>
+                                    <h5 class="left">주소</h5>
+                                    <p class="fw300 right">
+                                        서울 서초구 서초대로74길 23 (서초동,
+                                        서초타운트라팰리스) 108호
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5 class="left">전화번호</h5>
+                                    <a
+                                        href="tel:02-2055-3339"
+                                        class="fw300 right"
+                                        >02-2055-3339
+                                    </a>
+                                </li>
+                                <li>
+                                    <h5 class="left">영업시간</h5>
+                                    <p class="fw300 right">
+                                        평일 07:30~22:00 / 주말 10:00~21:00
+                                    </p>
+                                </li>
+                            </ul>
+                            <small class="ctm fw300 popup-desc">
+                                * 영업시간은 매장 사정에 따라 변동될 수
+                                있습니다.
+                            </small>
+                        </div>
+                        <div class="mapbox"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-bg"></div>
     </body>
     <!--------------- 카카오 맵 api 자바스크립트 부분 --------------->
     <script
@@ -309,5 +401,37 @@
         // 마커가 지도 위에 표시되도록 설정
         marker.setMap(map);
         // ------------- 카카오 웹 api 자바스크립트 부분 끝 -------------
+        // ------------- 팝업 스토어 시작 -------------
+        $(function () {
+            $(".btn-popup-store").click(function () {
+                $(".popup-store").fadeIn();
+            });
+
+            $(".btn-popup-store").click(function () {
+                $(".popup-bg").fadeIn();
+            });
+            $(".btn-popup-store1").click(function () {
+                $(".popup-store").fadeIn();
+            });
+
+            $(".btn-popup-store1").click(function () {
+                $(".popup-bg").fadeIn();
+            });
+            $(".btn-popup-store2").click(function () {
+                $(".popup-store").fadeIn();
+            });
+
+            $(".btn-popup-store2").click(function () {
+                $(".popup-bg").fadeIn();
+            });
+
+            $(".btn-popup-close").click(function () {
+                $(".popup-store").fadeOut();
+            });
+
+            $(".btn-popup-close").click(function () {
+                $(".popup-bg").fadeOut();
+            });
+        });
     </script>
 </html>
