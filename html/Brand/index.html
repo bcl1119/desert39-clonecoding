@@ -12,10 +12,7 @@
             href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&family=Noto+Sans+KR:wght@100;400;700&display=swap"
             rel="stylesheet"
         />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@600&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/store.css" />
         <title>디저트39</title>
     </head>
@@ -24,7 +21,7 @@
             <div class="center">
                 <h2>
                     디저트39
-                    <b>오시는 길</b>
+                    <b> 오시는 길</b>
                     안내
                 </h2>
                 <span class="tit eng fw500">Location</span>
@@ -44,7 +41,7 @@
 
                         <div class="txtbox">
                             <h3 class="eng fw600">Address</h3>
-                            <p>서울특별시 강남구 언주로 321(광진빌딩 6층)</p>
+                            <p>서울특별시 강남구 언주로 321 (광진빌딩 6층)</p>
                         </div>
                     </div>
 
@@ -55,8 +52,8 @@
                             </div>
 
                             <div class="txtbox">
-                                <h3>Tel</h3>
-                                <p>1644-2927</p>
+                                <h3 class="eng fw600">Tel</h3>
+                                <p class="eng fw300">1644 - 2927</p>
                             </div>
                         </a>
                     </div>
@@ -68,44 +65,76 @@
 
                         <div class="txtbox">
                             <h3 class="eng fw600">Fax</h3>
-                            <p>02 - 501 - 3902</p>
+                            <p class="eng fw300">02 - 501 - 3902</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="location-map-wrap">
                 <!-- 카카오 맵 api -->
-                <div id="map"></div>
+                <!-- <div id="map"></div> -->
+                <!-- 1. 지도 노드 -->
+                <div
+                    id="daumRoughmapContainer1649955303507"
+                    class="root_daum_roughmap root_daum_roughmap_landing"
+                ></div>
                 <!-- <div class="custom_zoomcontrol radius_border">
-                <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
-                        alt="확대"></span>
-                <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
-                        alt="축소"></span>
+                    <span onclick="zoomIn()">
+                        <img
+                            src="http://t1.daumcdn.net/localimg/localimages/07/2018/pc/detail/img_zoom.png"
+                            alt="확대"
+                        />
+                    </span>
+                    <span onclick="zoomOut()">
+                        <img
+                            src="http://t1.daumcdn.net/localimg/localimages/07/2018/pc/detail/img_zoom.png"
+                            alt="축소"
+                        />
+                    </span>
                 </div> -->
                 <!-- -------------맵 버튼 시작(이었던 것)------------- -->
-                <div class="wrap_btn_zoom">
-                    <button class="btn_zoom_in hide_text">
+                <!-- <div class="wrap_btn_zoom">
+                    <button class="btn_zoom_in hide_text" onclick="zoomIn()">
                         <span class="img_zoom">확대</span>
                     </button>
 
-                    <button class="btn_zoom_out hide_text">
+                    <button class="btn_zoom_out hide_text" onclick="zoomOut()">
                         <span class="img_zoom">축소</span>
                     </button>
 
                     <button class="btn_zoom_reset hide_text">
                         <span class="img_zoom">초기화</span>
                     </button>
-                </div>
+                </div> -->
                 <!-- -------------맵 버튼 끝------------- -->
             </div>
         </div>
     </body>
-    <!-- 카카오 맵 api -->
+    <!-- * 카카오맵 - 지도퍼가기 -->
+    <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
     <script
+        charset="UTF-8"
+        class="daum_roughmap_loader_script"
+        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
+
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            timestamp: "1649955303507",
+            key: "29uds",
+            mapWidth: "1440",
+            mapHeight: "470",
+        }).render();
+    </script>
+    <!-- <script
         type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f7ce88603e0054baaf1a5d1193a98451"
-    ></script>
-    <script>
+    ></script> -->
+    <!-- <script>
         var container = document.getElementById("map");
         var options = {
             center: new kakao.maps.LatLng(37.493585, 127.046417),
@@ -146,7 +175,7 @@
 
         // 인포윈도우에 나올 내용
         var iwContent =
-                '<div class="roughmap_lebel_text" style="top: -57px; left: -2.25px; width:129px;"><a href="https://map.kakao.com/?urlX=509996.0&amp;urlY=1110303.0&amp;name=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C%20321&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><span class="roughmap_lebel_text">서울 강남구 언주로 321</span></a></div>',
+                '<div class="roughmap_lebel_text" style="top: -57px; left: -2.25px;"><a href="https://map.kakao.com/?urlX=509996.0&amp;urlY=1110303.0&amp;name=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C%20321&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><span class="roughmap_lebel_text">서울 강남구 언주로 321</span></a></div>',
             iwPosition = new kakao.maps.LatLng(37.496497, 127.0453); //인포윈도우 표시 위치입니다
 
         // 인포윈도우를 생성합니다
@@ -180,6 +209,6 @@
         // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
         function zoomOut() {
             map.setLevel(map.getLevel() + 1);
-        }
+        } -->
     </script>
 </html>
