@@ -722,6 +722,7 @@
             </div>
         </div>
         <div class="popup-bg"></div>
+        <a href="./index.html">오시는 길</a>
     </body>
     <!--------------- 카카오 맵 api 자바스크립트 부분 --------------->
     <script
@@ -868,9 +869,9 @@
         marker.setMap(map5);
         marker.setMap(map6);
 
-        setTimeout(function () {
-            map.relayout();
-        }, 0);
+        // setTimeout(function () {
+        //     map.relayout();
+        // }, 0);
         // ------------- 카카오 웹 api 자바스크립트 부분 끝 -------------
         // ------------- 팝업 스토어 시작 -------------
         $(function () {
@@ -910,9 +911,6 @@
                 $(".popup-bg").fadeOut();
             });
         });
-
-        // $("button").click(function () {
-        //     toggleClass(".textbox");
-        // });
+        // map.relayout();
     </script>
 </html>
