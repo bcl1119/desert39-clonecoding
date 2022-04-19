@@ -777,3 +777,10 @@ a {
     width: 530px;
     height: 300px;
 }
+.popup-store1 .inner .mapbox,
+.popup-store2 .inner .mapbox,
+.popup-store3 .inner .mapbox,
+.popup-store4 .inner .mapbox {
+    width: 530px;
+    height: 300px;
+}
